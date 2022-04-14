@@ -1,8 +1,8 @@
 const editHandler = async (event) => {
 
 
-    const name = document.querySelector('#blog-name').value.trim();
-    const description = document.querySelector('#blog-desc').value.trim();
+    const name = document.querySelector('#blogs-name').value.trim();
+    const description = document.querySelector('#blogs-desc').value.trim();
   
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
@@ -18,7 +18,7 @@ const editHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/new');
+        document.location.replace('/newprofile');
       } else {
         alert('Failed to update blog');
       }

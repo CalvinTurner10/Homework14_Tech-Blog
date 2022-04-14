@@ -12,3 +12,4 @@ Last but not least is the **Controller**. Think of it as the intermediary betwee
 
 Also in this unit, we'll cover user authentication. We'll build on the password hashing we learned in the previous module and learn to authenticate application users by verifying their credentials. We'll then use sessions and cookies to keep users logged in and authorized to view the content of the app.
 
+https://homework14tech-blog.herokuapp.com/

@@ -17,17 +17,17 @@ router.post('/', withAuth, async (req, res) => {
 // delete
 router.delete('/:id' , withAuth, async (req, res) => {
   try{
-    const blogData = await Blogs.destroy({
+    const blogsData = await Blogs.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       }
     });
-    if (!blogData){
+    if (!blogsData){
       res.status(404).json({message: 'Try again!'});
       return;
     }
-    res.status(200).json(blogData);
+    res.status(200).json(blogsData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -36,19 +36,19 @@ router.delete('/:id' , withAuth, async (req, res) => {
 
 router.put('/:id', withAuth, async (req, res) => {
   try {
-    const blogData = await Blogs.update(req.body, {
+    const blogsData = await Blogs.update(req.body, {
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!blogData) {
+    if (!blogsData) {
       res.status(404).json({ message: 'Try again!' });
       return;
     }
 
-    res.status(200).json(blogData);
+    res.status(200).json(blogsData);
   } catch (err) {
     res.status(500).json(err);
   }

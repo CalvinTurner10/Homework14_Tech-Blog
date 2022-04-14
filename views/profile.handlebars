@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-auto">
+        <h2>Welcome, {{username}}</h2>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h3>Add a Blog:</h3>
+
+        <form class="form new-blog-form">
+            <div class="form-group">
+                <label for="blog-name"> title</label>
+                <input type="text" class="form-input" id= "blog-name" name="blog-name"/>
+            </div>
+
+            <div class="form-group">
+                <label for="blog-desc"> description:</label>
+                <textarea name="blog-desc" id="blog-desc" class="form-input"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+    </div>
+    {{#if blogs.length}}
+    <div class="col-md-6 blog-list">
+        <h3>Current Blogs</h3>
+        {{#each blogs as |blogs|}}
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <h4><a href="/blogs/{{blogs.id}}">{{blogs.name}}</a></h4>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-sm btn-danger delete" data-id="{{blogs.id}}"> DELETE</button>
+                <h4><a href="/edit/{{blogs.id}}"> edit</a></h4>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
+<script src="./js/newprofile.js"></script>

@@ -2,7 +2,7 @@
 header {
   padding: 30px;
   text-align: center;
-  background:-moz-linear-gradient() (45deg, black, transparent 100px);
+  background:-moz-linear-gradient() (50deg, black, transparent 100px);
   color: grey;
   border-bottom-style: solid;
 }

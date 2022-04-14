@@ -1,19 +1,19 @@
-{{#each blog as |blog|}}
-<div class="row mb-4 blog">
+{{#each blogs as |blogs|}}
+<div class="row mb-4 blogs">
     <div class="col-md-5">
         <h2>
-            <a href="/blog/{{id}}">{{name}}</a>
+            <a href="/blogs/{{blogs.id}}">{{blogs.name}}</a>
         </h2>
-        <p>Made by {{user.username}} on {{format_date date_created}}</p>
+        <p>Made by {{blogs.user.username}} on {{format_date blog.date_created}}</p>
     </div>
     <div class="col-md-7">
         <p>
-            {{blog.description}}
+            {{blogs.description}}
         </p>
     </div>
-    {{#if comments}}
+    {{#if blogs.comments}}
     <h3 class="col-md">Comments</h3>
-    {{#each comments as |comment|}}
+    {{#each blog.comments as |comment|}}
     <div class="col-md">
         <p>{{comment.text}} commented by user {{comment.user_id}} on {{format_date comment.date_created}}</p>
     </div>

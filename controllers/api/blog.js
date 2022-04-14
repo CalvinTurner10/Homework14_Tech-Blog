@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const { TBlog, Comment} = require('../../models');
+const { Blogs, Comment} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newBlog = await TBlog.create({
+    const newBlogs = await Blogs.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newBlog);
+    res.status(200).json(newBlogs);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -17,17 +17,17 @@ router.post('/', withAuth, async (req, res) => {
 // delete
 router.delete('/:id' , withAuth, async (req, res) => {
   try{
-    const TBlogData = await TBlog.destroy({
+    const blogData = await Blogs.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       }
     });
-    if (!TBlogData){
+    if (!blogData){
       res.status(404).json({message: 'Try again!'});
       return;
     }
-    res.status(200).json(TBlogData);
+    res.status(200).json(blogData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -36,19 +36,19 @@ router.delete('/:id' , withAuth, async (req, res) => {
 
 router.put('/:id', withAuth, async (req, res) => {
   try {
-    const TBlogData = await TBlog.update(req.body, {
+    const blogData = await Blogs.update(req.body, {
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!TBlogData) {
+    if (!blogData) {
       res.status(404).json({ message: 'Try again!' });
       return;
     }
 
-    res.status(200).json(TBlogData);
+    res.status(200).json(blogData);
   } catch (err) {
     res.status(500).json(err);
   }

@@ -1,6 +1,6 @@
 
 header {
-  padding: 40px;
+  padding: 30px;
   text-align: center;
   background: repeating-linear-gradient(45deg, black, transparent 100px);
   color: grey;
@@ -9,7 +9,7 @@ header {
 
 nav {
   justify-content: space-between;
-  padding-right: 10%;
+  padding-right: 15%;
   display: flex;
 }
 
@@ -34,7 +34,7 @@ a{
 }
 
 header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid wheat;
 }
 
 .no-button {
@@ -48,7 +48,7 @@ header, .project:not(:last-child) {
 }
 
 .no-button:hover {
-  color: #065b83;
+  color: purple;
   text-decoration: underline;
 }
 

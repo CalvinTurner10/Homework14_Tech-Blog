@@ -9,7 +9,7 @@ const editHandler = async (event) => {
   
       
   
-      const response = await fetch(`/api/TBlog/${id}`, {
+      const response = await fetch(`/api/Blogs/${id}`, {
         method: 'put',
         body: JSON.stringify({ name, description }),
         headers: {

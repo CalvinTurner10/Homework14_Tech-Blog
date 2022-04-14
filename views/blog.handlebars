@@ -1,0 +1,10 @@
+<div class="text-center">
+    <h2 id="name">{{name}} </h2>
+    <p id= "description">{{description}}</p>
+    <p> Made by {{user.username}} on {{format_date date_created}}</p>
+    <textarea name="text" id="comment" cols="30" rows="10"></textarea>
+    <p>
+        <button class="btn btn-primary" id="commentbtn" data-id="{{id}}"> comment</button>
+    </p>
+</div>
+<script src="../public/js/comment.js"></script>

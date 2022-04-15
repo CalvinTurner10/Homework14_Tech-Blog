@@ -13,9 +13,9 @@
     </div>
     {{#if blogs.comments}}
     <h3 class="col-md">Comments</h3>
-    {{#each blog.comments as |comment|}}
+    {{#each blogs.comments as |comment|}}
     <div class="col-md">
-        <p>{{comment.text}} commented by user {{comment.user_id}} on {{format_date comment.date_created}}</p>
+        <p>{{comment.text}} commented by {{comment.user_id}} on {{format_date comment.date_created}}</p>
     </div>
     {{/each}}
     {{/if}}

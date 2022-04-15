@@ -31,7 +31,7 @@ a{
   left:50%;
   transform: translate(-50%, 0);
   justify-content: center;
-  background-color: firebrick;
+  background-color: blue;
 }
 
 header, .project:not(:last-child) {
@@ -43,7 +43,7 @@ header, .project:not(:last-child) {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: red;
+  color:red;
   text-decoration: none;
   font-size: 100%;
 }
@@ -66,5 +66,5 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
-  background-color: firebrick;
+  background-color:firebrick;
 }

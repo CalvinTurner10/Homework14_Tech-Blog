@@ -18,15 +18,15 @@ name: {
 description: {
   type: DataTypes.STRING,
 },
-date_created:{
-  type: DataTypes.Date,
-  allowNull: false,
-  defaultValue:DataTypes.NOW,
-},
+// date_created:{
+//   type: DataTypes.Date,
+//   allowNull: false,
+//   defaultValue:DataTypes.NOW,
+// },
 user_id:{
   type: DataTypes.INTEGER,
   references:{
-    module: 'user',
+    model: 'user',
     key: 'id',
   },
 },

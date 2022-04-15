@@ -18,10 +18,10 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    //  adding the data so that template can read it
+  
     const blogs = blogsData.map((blogs) => blogs.get({ plain: true }));
 
-    // Passing thedata and session flag into template
+   
     res.render('homepage', { 
       blogs, 
       logged_in: req.session.logged_in 

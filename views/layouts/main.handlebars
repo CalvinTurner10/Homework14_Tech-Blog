@@ -17,17 +17,24 @@
       </h1>
       <nav>
         <a href="/">Home</a>
-        {{!-- {{#if logged_in}} --}}
-        <a href="/newprofile.js">Dashboard</a>
+        <a href="/dashboard">Dashboard</a>
         <button class= "no-button" id="logout"> Logout</button>
-        {{!-- {{else}} --}}
         <a href="/js/login.js"></a>
         <a href="/js/login.js"> Login</a>
         {{!-- {{if}} --}}
       </nav>
     </header>
     <main class= "container container-fluid mt-5">
-      {{{body}}}
+      {{!-- {{{body}}} --}}
+      <form action="/action_page.php" method="post">
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
     </main>
   </div>
   {{!-- {{#if logged_in}} --}}

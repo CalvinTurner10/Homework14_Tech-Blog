@@ -113,7 +113,7 @@ router.get('/login', (req, res) => {
 
 router.get('/test', async (req, res) => {
   try {
-    // Get all blogs and JOIN with user data
+   
     const blogsData = await Blogs.findAll({
       include: [
         {
